@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>>
+
+    <style>
+        form {
+
+            border: 2px solid rgb(216, 198, 198);
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            background-color: aliceblue;
+            box-shadow: 0 0 4px rgb(152, 138, 138);
+            
+
+        }
+
+        input {
+            margin: 5px;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+        .error{
+            margin-left: 5px;
+            color: red;
+            font-size: x-small;
+        }
+        input:not([type='radio']){
+            height: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+
+        <form action="abc.php" method="post" enctype="multipart/form-data" id="form">
+            <h1>FORM VALIDATION</h1>
+            <input type="text" id="name" placeholder="Name">
+            <div id="name_error" class="error"></div>
+            <input type="number" id="age" placeholder="Age" min="0">
+            <div id="age_error" class="error"></div>
+            <group>
+                <input type="radio" name="Gender" value="M" class="g">Male
+                <input type="radio" name="Gender" value="F" class="g">Female
+            </group>
+            <div id="g_error" class="error"></div>
+            <input type="file" id="file">
+            <div id="file_error" class="error"></div>
+            <input type="email" id="email" placeholder="Email">
+            <div id="email-error" class="error"></div>
+            <input type="password" id="password" placeholder="Password">
+            <div id="pass_error" class="error"></div>
+            <input type="submit">
+
+        </form>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+
+</html>
